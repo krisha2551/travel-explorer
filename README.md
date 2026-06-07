@@ -11,7 +11,7 @@ A modern and responsive travel booking web application built with React, Vite, F
 
 ## 🚀 Live Demo
 
-🔗 travel-explorer-nine-opal.vercel.app
+🔗 https://travel-explorer-41040.web.app
 
 ---
 
