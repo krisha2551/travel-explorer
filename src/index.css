@@ -1,0 +1,171 @@
+/* ───────────── GOOGLE FONTS ───────────── */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap');
+
+/* ───────────── DESIGN TOKENS ───────────── */
+:root {
+  /* Primary palette */
+  --clr-primary-1: #0F2027;
+  --clr-primary-2: #203A43;
+  --clr-primary-3: #2C5364;
+
+  /* Accent */
+  --accent-1: #00C9FF;
+  --accent-2: #92FE9D;
+
+  /* Gradients */
+  --grad-primary: linear-gradient(135deg, var(--clr-primary-1), var(--clr-primary-2), var(--clr-primary-3));
+  --grad-accent: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+
+  /* Surfaces */
+  --card-bg: #ffffff;
+  --card-glass: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --bg-light: #f8fafb;
+
+  /* Text */
+  --txt-primary: #1A1A2E;
+  --txt-secondary: #6B7280;
+
+  /* Status */
+  --success: #10B981;
+  --danger: #EF4444;
+  --warning: #F59E0B;
+  --price: #00C9FF;
+
+  /* Footer */
+  --footer-bg: #0D1117;
+
+  /* Shadows */
+  --shadow-card: 0 8px 32px rgba(0, 201, 255, 0.15);
+  --shadow-hover: 0 16px 48px rgba(0, 201, 255, 0.25);
+
+  /* Radii */
+  --radius-card: 16px;
+  --radius-btn: 12px;
+  --radius-hero: 24px;
+
+  /* Layout */
+  --max-w: 1280px;
+  --section-py: 96px;
+
+  /* Transitions */
+  --transition: all 0.3s ease;
+
+  /* Fonts */
+  --font-head: 'Plus Jakarta Sans', 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Z-index */
+  --z-navbar: 1000;
+  --z-modal: 1500;
+}
+
+/* ───────────── RESET ───────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--txt-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: var(--bg-light);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* ───────────── TYPOGRAPHY ───────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-head);
+  line-height: 1.15;
+  color: var(--txt-primary);
+}
+
+/* ───────────── UTILITIES ───────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.gradient-text {
+  background: var(--grad-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ───────────── GLOBAL ANIMATIONS ───────────── */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.4); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+/* ───────────── ACCESSIBILITY ───────────── */
+*:focus-visible {
+  outline: 2px solid var(--accent-1);
+  outline-offset: 2px;
+}
+
+/* ───────────── RESPONSIVE ───────────── */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+}

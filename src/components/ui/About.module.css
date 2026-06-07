@@ -1,0 +1,88 @@
+/* ─── ABOUT HERO ─── */
+.aboutHero { position: relative; padding: 160px 0 120px; background: var(--grad-primary); text-align: center; overflow: hidden; }
+.aboutHero::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 80px; background: linear-gradient(to bottom right, transparent 49.5%, #f8fafb 50%); }
+.aboutHero h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; color: #fff; margin-bottom: 16px; }
+.aboutHero p { font-size: clamp(1rem, 2vw, 1.15rem); color: rgba(255,255,255,.6); max-width: 600px; margin: 0 auto; }
+.gradientText { background: var(--grad-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+/* ─── STATS ─── */
+.statsSection { padding: 80px 0 96px; }
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.statCard { text-align: center; padding: 40px 24px; background: #fff; border-radius: var(--radius-card); border: 1px solid rgba(0,0,0,.04); transition: var(--transition); }
+.statCard:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
+.statIcon { width: 56px; height: 56px; border-radius: 14px; background: linear-gradient(135deg, rgba(0,201,255,.1), rgba(146,254,157,.1)); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.5rem; }
+.statNumber { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; font-family: var(--font-head); background: var(--grad-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 4px; }
+.statLabel { color: var(--txt-secondary); font-size: .9rem; font-weight: 500; }
+
+/* ─── COMMON HEADERS ─── */
+.header { text-align: center; margin-bottom: 56px; }
+.sectionLabel { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(0,201,255,.08); border-radius: 999px; font-size: .8rem; font-weight: 600; color: var(--accent-1); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-1); }
+.sectionTitle { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 12px; }
+
+/* ─── MISSION / VISION ─── */
+.mvSection { padding: 0 0 96px; }
+.mvGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.mvCard { position: relative; padding: 48px 40px; background: #fff; border-radius: var(--radius-card); border: 1px solid rgba(0,0,0,.04); overflow: hidden; transition: var(--transition); }
+.mvCard:hover { box-shadow: var(--shadow-card); transform: translateY(-4px); }
+.mvCard::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--grad-accent); }
+.mvIcon { width: 64px; height: 64px; border-radius: 16px; background: var(--grad-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 1.8rem; }
+.mvCard h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
+.mvCard p { color: var(--txt-secondary); line-height: 1.8; font-size: .95rem; }
+
+/* ─── VALUES ─── */
+.valuesSection { padding: 0 0 96px; }
+.valuesGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.valueCard { padding: 32px; background: #fff; border-radius: var(--radius-card); border: 1px solid rgba(0,0,0,.04); border-left: 4px solid; transition: var(--transition); }
+.valueCard:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
+.valueCard:nth-child(1) { border-left-color: var(--accent-1); }
+.valueCard:nth-child(2) { border-left-color: var(--accent-2); }
+.valueCard:nth-child(3) { border-left-color: #F59E0B; }
+.valueCard:nth-child(4) { border-left-color: #8B5CF6; }
+.valueCard h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.valueCard h4 span { font-size: 1.4rem; }
+.valueCard p { color: var(--txt-secondary); font-size: .9rem; line-height: 1.7; }
+
+/* ─── TEAM ─── */
+.teamSection { padding: 0 0 96px; }
+.teamGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.teamCard { text-align: center; background: #fff; border-radius: var(--radius-card); padding: 40px 24px; border: 1px solid rgba(0,0,0,.04); transition: var(--transition); position: relative; overflow: hidden; }
+.teamCard:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
+.teamAvatar { width: 96px; height: 96px; border-radius: 50%; background: var(--grad-primary); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; color: #fff; font-family: var(--font-head); font-weight: 700; position: relative; }
+.teamAvatar::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 3px solid transparent; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)) border-box; -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.teamCard h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+.role { color: var(--accent-1); font-size: .85rem; font-weight: 600; margin-bottom: 12px; }
+.teamCard p { color: var(--txt-secondary); font-size: .85rem; line-height: 1.6; }
+.teamOverlay { position: absolute; inset: 0; background: var(--grad-primary); display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transition: var(--transition); padding: 24px; }
+.teamCard:hover .teamOverlay { opacity: .95; }
+.teamOverlay h4 { color: #fff; font-size: 1.1rem; margin-bottom: 4px; }
+.teamOverlay .role { color: var(--accent-1); margin-bottom: 16px; }
+.teamOverlay p { color: rgba(255,255,255,.7); font-size: .85rem; line-height: 1.6; }
+
+/* ─── CHECKLIST ─── */
+.checklistSection { padding: 0 0 96px; }
+.checklist { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.checkItem { display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px; background: #fff; border-radius: var(--radius-btn); border: 1px solid rgba(0,0,0,.04); transition: var(--transition); }
+.checkItem:hover { box-shadow: var(--shadow-card); transform: translateX(4px); }
+.checkIcon { width: 28px; height: 28px; border-radius: 50%; background: rgba(0,201,255,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.checkIcon svg { width: 14px; height: 14px; }
+.checkItem h4 { font-size: .95rem; font-weight: 700; margin-bottom: 4px; }
+.checkItem p { color: var(--txt-secondary); font-size: .88rem; }
+
+/* ─── CTA ─── */
+.aboutCta { padding: 0 0 96px; }
+.ctaBanner { padding: 72px 48px; border-radius: 24px; background: var(--grad-primary); text-align: center; position: relative; overflow: hidden; }
+.ctaBanner::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(0,201,255,.12) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(146,254,157,.08) 0%, transparent 50%); }
+.ctaBanner h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; color: #fff; margin-bottom: 12px; position: relative; z-index: 1; }
+.ctaBanner p { color: rgba(255,255,255,.6); max-width: 480px; margin: 0 auto 32px; position: relative; z-index: 1; }
+.btnPrimary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: var(--grad-accent); color: var(--clr-primary-1); font-weight: 700; font-size: 1rem; border-radius: var(--radius-btn); transition: var(--transition); box-shadow: 0 4px 20px rgba(0,201,255,.3); position: relative; z-index: 1; border: none; cursor: pointer; font-family: inherit; }
+.btnPrimary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,201,255,.45); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) { .statsGrid, .teamGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  .mvGrid, .valuesGrid { grid-template-columns: 1fr; }
+  .statsGrid, .teamGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) { .statsGrid { grid-template-columns: 1fr 1fr; } .teamGrid { grid-template-columns: 1fr; } }

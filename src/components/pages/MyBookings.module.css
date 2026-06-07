@@ -1,0 +1,334 @@
+/* ==================== MY BOOKINGS PAGE ==================== */
+
+.heroSection {
+  background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
+  color: white;
+  padding: calc(8px * 8) 0;
+  margin-bottom: calc(8px * 6);
+  border-bottom: 1px solid rgba(0, 201, 255, 0.1);
+}
+
+.pageTitle {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  margin-bottom: calc(8px * 1);
+  font-family: "Syne", sans-serif;
+  letter-spacing: -1px;
+}
+
+.pageSubtitle {
+  font-size: clamp(14px, 2vw, 18px);
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.bookingsCount {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1A1A2E;
+  margin-bottom: calc(8px * 4);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* ==================== EMPTY STATE ==================== */
+.emptyCard {
+  border: 2px dashed rgba(0, 201, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 201, 255, 0.05);
+  background: linear-gradient(135deg, rgba(0, 201, 255, 0.05), rgba(146, 254, 157, 0.05));
+}
+
+.emptyBody {
+  padding: calc(8px * 8) calc(8px * 4);
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 5rem;
+  margin-bottom: calc(8px * 2);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.emptyTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1A1A2E;
+  margin-bottom: calc(8px * 2);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.emptyText {
+  color: #6B7280;
+  font-size: 1rem;
+  margin-bottom: calc(8px * 4);
+  line-height: 1.8;
+}
+
+.exploreBtn {
+  background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);
+  border: none;
+  color: #0F2027;
+  font-weight: 700;
+  padding: calc(8px * 2.5) calc(8px * 5);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+.exploreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 201, 255, 0.3);
+}
+
+/* ==================== BOOKING CARD ==================== */
+.bookingCard {
+  border: 1px solid rgba(0, 201, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 201, 255, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+  background: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bookingCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 201, 255, 0.2);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: calc(8px * 3);
+  padding-bottom: calc(8px * 2);
+  border-bottom: 1px solid rgba(0, 201, 255, 0.1);
+}
+
+.tripName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1A1A2E;
+  margin-bottom: 0;
+  line-height: 1.3;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.bookingBadge {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: white;
+  padding: calc(8px * 1) calc(8px * 2);
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.bookingDetails {
+  display: flex;
+  flex-direction: column;
+  gap: calc(8px * 2);
+  margin-bottom: calc(8px * 3);
+}
+
+.detailItem {
+  display: flex;
+  gap: calc(8px * 2);
+  padding: calc(8px * 2.5);
+  background: linear-gradient(135deg, rgba(0, 201, 255, 0.05), rgba(146, 254, 157, 0.05));
+  border-radius: 12px;
+  border-left: 4px solid #00C9FF;
+  transition: all 0.3s ease;
+}
+
+.detailItem:hover {
+  background: linear-gradient(135deg, rgba(0, 201, 255, 0.1), rgba(146, 254, 157, 0.1));
+}
+
+.detailIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.detailLabel {
+  font-size: 0.7rem;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: calc(8px * 0.5);
+}
+
+.detailValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1A1A2E;
+  margin-bottom: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.detailValueGrand {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #00C9FF;
+  margin-bottom: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.specialRequest {
+  display: flex;
+  gap: calc(8px * 2);
+  padding: calc(8px * 2.5);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(245, 158, 11, 0.02));
+  border-radius: 12px;
+  border-left: 4px solid #F59E0B;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.requestIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.requestLabel {
+  font-size: 0.7rem;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: calc(8px * 0.5);
+}
+
+.requestText {
+  color: #1A1A2E;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.cardFooter {
+  padding-top: calc(8px * 2);
+  border-top: 1px solid rgba(0, 201, 255, 0.1);
+}
+
+.contactBtn {
+  border-color: rgba(0, 201, 255, 0.3);
+  color: #00C9FF;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+}
+
+.contactBtn:hover {
+  background: linear-gradient(135deg, rgba(0, 201, 255, 0.1), rgba(146, 254, 157, 0.1));
+  border-color: #00C9FF;
+  color: #00C9FF;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: calc(8px * 6) 0;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    gap: calc(8px * 2);
+  }
+
+  .bookingBadge {
+    align-self: flex-start;
+  }
+
+  .emptyBody {
+    padding: calc(8px * 5) calc(8px * 2);
+  }
+
+  .emptyIcon {
+    font-size: 3.5rem;
+  }
+}
+
+.requestLabel {
+  font-size: 0.75rem;
+  color: #92400E;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.requestText {
+  font-size: 0.95rem;
+  color: #78350F;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.cardFooter {
+  padding-top: 1rem;
+  border-top: 1px solid #E2E8F0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contactBtn {
+  width: 100%;
+  border-color: #0D9488 !important;
+  color: #0D9488 !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+  background-color: #0D9488 !important;
+  color: white !important;
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+
+  .pageSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .emptyBody {
+    padding: 2rem 1rem;
+  }
+
+  .emptyIcon {
+    font-size: 3rem;
+  }
+
+  .bookingCard {
+    margin-bottom: 1rem;
+  }
+}

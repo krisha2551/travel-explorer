@@ -1,0 +1,851 @@
+/* ================= COLOR VARIABLES ================= */
+:root {
+  --primary: #00C9B1;
+  --primary-dark: #00A896;
+  --secondary: #1a2a3a;
+  --bg-light: #f0f4f8;
+  --text-dark: #1a1a2e;
+  --text-muted: #6b7280;
+  --card-bg: #ffffff;
+  --radius: 16px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 40px rgba(0, 201, 177, 0.18);
+  --gradient-text: linear-gradient(135deg, #00C9B1, #0ea5e9);
+}
+
+/* ================= HERO SECTION ================= */
+.heroSection {
+  position: relative;
+  height: 420px;
+  margin-bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(0.85);
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(26, 42, 58, 0.7)
+  );
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: var(--text-dark) !important;
+  border: none !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  padding: 10px 16px !important;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow);
+}
+
+.backBtn:hover {
+  background: white !important;
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.heroTitle {
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.heroLocation {
+  color: rgba(255, 255, 255, 0.95);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  margin: 0 0 16px 0;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+
+.badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  padding: 8px 16px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  border-radius: 20px !important;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  transform: translateY(-2px);
+}
+
+/* ================= CONTENT SECTIONS ================= */
+.section {
+  background: var(--card-bg) !important;
+  border: 1px solid rgba(0, 201, 177, 0.15) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  margin-bottom: 32px;
+  transition: all 0.3s ease;
+  overflow: hidden !important;
+}
+
+.section:hover {
+  box-shadow: var(--shadow-hover) !important;
+  border-color: rgba(0, 201, 177, 0.3) !important;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(0, 201, 177, 0.1);
+}
+
+.sectionTitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.sectionText {
+  color: var(--text-muted);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ================= HIGHLIGHTS ================= */
+.highlightsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0, 201, 177, 0.05);
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 201, 177, 0.2);
+  border-left: 4px solid var(--primary);
+  transition: all 0.3s ease;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.highlightItem:hover {
+  background: rgba(0, 201, 177, 0.1);
+  border-color: rgba(0, 201, 177, 0.3);
+  transform: translateX(6px);
+}
+
+.highlightIcon {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+/* ================= ACCORDION ================= */
+.accordion {
+  border: none;
+  gap: 8px;
+}
+
+.accordionHeader {
+  padding: 16px !important;
+  background: rgba(0, 201, 177, 0.05) !important;
+  border: 1px solid rgba(0, 201, 177, 0.15) !important;
+  border-radius: 10px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  color: var(--text-dark) !important;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.accordionHeader:hover {
+  background: rgba(0, 201, 177, 0.1) !important;
+  border-color: rgba(0, 201, 177, 0.3) !important;
+}
+
+.dayBadge {
+  background: linear-gradient(135deg, var(--primary), #0ea5e9);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 201, 177, 0.2);
+}
+
+.dayTitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.accordionBody {
+  padding: 16px !important;
+  background: rgba(0, 201, 177, 0.02) !important;
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ================= LISTS (INCLUSIONS/EXCLUSIONS) ================= */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(0, 201, 177, 0.04);
+  border: 1px solid rgba(0, 201, 177, 0.15);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.listItem:hover {
+  background: rgba(0, 201, 177, 0.08);
+  border-color: rgba(0, 201, 177, 0.25);
+  transform: translateX(6px);
+}
+
+.checkIcon {
+  font-size: 1.2rem;
+  color: #10B981;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.crossIcon {
+  font-size: 1.2rem;
+  color: #EF4444;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.bestTimeText {
+  color: var(--text-muted);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+  padding: 20px;
+  background: rgba(245, 158, 11, 0.05);
+  border-left: 4px solid #F59E0B;
+  border-radius: 10px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-left: 4px solid #F59E0B;
+}
+
+/* ================= BOOKING CARD ================= */
+.bookingCard {
+  position: sticky;
+  top: 100px;
+  border: 1px solid rgba(0, 201, 177, 0.15) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  background: var(--card-bg) !important;
+  overflow: hidden !important;
+}
+
+.priceBox {
+  padding: 28px;
+  background: linear-gradient(135deg, var(--secondary), #2a3f5f);
+  border-radius: 0;
+  color: white;
+  margin-bottom: 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.priceLabel {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.9;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.priceValue {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.priceNote {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 8px 0 0 0;
+}
+
+.tripInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(0, 201, 177, 0.1);
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.infoIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.infoLabel {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.infoValue {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.buttonGroup {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.bookBtn {
+  background: linear-gradient(135deg, var(--primary), #0ea5e9) !important;
+  border: none !important;
+  color: white !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  padding: 14px 24px !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow) !important;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.bookBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover) !important;
+}
+
+.inquiryBtn {
+  border: 2px solid var(--primary) !important;
+  color: var(--primary) !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  padding: 12px 24px !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+  background: transparent !important;
+  font-size: 1rem;
+}
+
+.inquiryBtn:hover {
+  background: rgba(0, 201, 177, 0.08) !important;
+  color: var(--primary-dark) !important;
+  transform: translateY(-2px);
+}
+
+.trustText {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.notFoundCard {
+  border-radius: var(--radius) !important;
+  border: 2px dashed rgba(0, 201, 177, 0.3) !important;
+  background: rgba(240, 244, 248, 0.5) !important;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 992px) {
+  .bookingCard {
+    position: relative;
+    top: auto;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 350px;
+  }
+
+  .heroTitle {
+    font-size: 1.6rem;
+  }
+
+  .heroLocation {
+    font-size: 1rem;
+  }
+
+  .priceValue {
+    font-size: 2rem;
+  }
+
+  .badges {
+    gap: 8px;
+  }
+
+  .badge {
+    font-size: 0.8rem !important;
+    padding: 6px 12px !important;
+  }
+
+  .backBtn {
+    padding: 8px 12px !important;
+    font-size: 0.9rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+
+  .priceBox {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .tripInfo {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    gap: 12px;
+  }
+
+  .buttonGroup {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .bookBtn,
+  .inquiryBtn {
+    padding: 12px 16px !important;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 300px;
+  }
+
+  .heroTitle {
+    font-size: 1.4rem;
+  }
+
+  .heroContent {
+    padding: 20px 16px;
+  }
+
+  .badges {
+    gap: 8px;
+  }
+
+  .badge {
+    font-size: 0.75rem !important;
+    padding: 6px 10px !important;
+  }
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .priceBox {
+    padding: 16px;
+  }
+
+  .priceValue {
+    font-size: 1.8rem;
+  }
+
+  .highlightItem,
+  .listItem {
+    padding: 12px;
+    gap: 8px;
+  }
+}
+
+.dayTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #0F2027;
+}
+
+.accordionBody {
+  padding: calc(8px * 3);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 201, 255, 0.1);
+  border-top: none;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  color: #6B7280;
+  line-height: 1.8;
+  font-family: 'Inter', sans-serif;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(8px * 1);
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: calc(8px * 2);
+  padding: calc(8px * 2);
+  background: rgba(0, 201, 255, 0.04);
+  border: 1px solid rgba(0, 201, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.listItem:hover {
+  background: rgba(0, 201, 255, 0.08);
+  border-color: rgba(0, 201, 255, 0.2);
+  transform: translateX(calc(8px * 0.75));
+}
+
+.checkIcon {
+  font-size: 1.2rem;
+  color: #10B981;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.crossIcon {
+  font-size: 1.2rem;
+  color: #EF4444;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.bestTimeText {
+  color: #6B7280;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 0;
+  padding: calc(8px * 3);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(245, 158, 11, 0.04));
+  border-left: 4px solid #F59E0B;
+  border-radius: 12px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-left: 4px solid #F59E0B;
+}
+
+.bookingCard {
+  position: sticky;
+  top: 100px;
+  border: 1px solid rgba(0, 201, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 201, 255, 0.15);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+
+.priceBox {
+  padding: calc(8px * 4);
+  background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
+  border-radius: 0;
+  color: white;
+  margin-bottom: calc(8px * 4);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.priceBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(90deg, rgba(0, 201, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(0, 201, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+.priceLabel {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.9;
+  font-weight: 600;
+  margin-bottom: calc(8px * 1);
+  position: relative;
+  z-index: 1;
+}
+
+.priceValue {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: calc(8px * 0.75);
+  position: relative;
+  z-index: 1;
+  color: #00C9FF;
+}
+
+.priceNote {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.tripInfo {
+  display: flex;
+  flex-direction: column;
+  gap: calc(8px * 2);
+  margin-bottom: calc(8px * 4);
+  padding-bottom: calc(8px * 4);
+  border-bottom: 1px solid rgba(0, 201, 255, 0.1);
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: calc(8px * 2);
+}
+
+.infoIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.infoLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  margin-bottom: calc(8px * 0.5);
+}
+
+.infoValue {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0F2027;
+  margin-bottom: 0;
+}
+
+.buttonGroup {
+  display: grid;
+  gap: calc(8px * 2);
+  margin-bottom: calc(8px * 3);
+}
+
+.bookBtn {
+  background: linear-gradient(135deg, #00C9FF, #92FE9D);
+  border: none;
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  padding: calc(8px * 1.75);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 201, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.bookBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.bookBtn:hover {
+  transform: translateY(calc(8px * -0.75));
+  box-shadow: 0 12px 32px rgba(0, 201, 255, 0.4);
+  color: white;
+}
+
+.bookBtn:hover::before {
+  left: 100%;
+}
+
+.inquiryBtn {
+  border: 2px solid rgba(0, 201, 255, 0.3);
+  color: #00C9FF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  padding: calc(8px * 1.75);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.inquiryBtn:hover {
+  background-color: rgba(0, 201, 255, 0.1);
+  border-color: #00C9FF;
+  color: #00C9FF;
+  transform: translateY(calc(8px * -0.5));
+  box-shadow: 0 4px 12px rgba(0, 201, 255, 0.2);
+}
+
+.trustText {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #6B7280;
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.notFoundCard {
+  border-radius: 16px;
+  border: 2px dashed rgba(0, 201, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+}
+
+@media (max-width: 992px) {
+  .bookingCard {
+    position: relative;
+    top: auto;
+    margin-top: calc(8px * 4);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+
+  .heroLocation {
+    font-size: 1rem;
+  }
+
+  .heroSection {
+    height: 400px;
+    margin-bottom: calc(8px * 2);
+  }
+
+  .priceValue {
+    font-size: 2rem;
+  }
+
+  .badges {
+    gap: calc(8px * 1);
+  }
+
+  .badge {
+    font-size: 0.8rem;
+    padding: calc(8px * 0.75) calc(8px * 1.5);
+  }
+
+  .backBtn {
+    top: calc(8px * 2);
+    left: calc(8px * 1);
+    padding: calc(8px * 0.75) calc(8px * 1.5);
+  }
+}

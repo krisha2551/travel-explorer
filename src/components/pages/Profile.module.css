@@ -1,0 +1,68 @@
+/* ─── PROFILE LAYOUT ─── */
+.profilePage { padding: 100px 0 96px; max-width: var(--max-w); margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.profileLayout { display: grid; grid-template-columns: 340px 1fr; gap: 32px; align-items: start; }
+.notLoggedIn { text-align: center; padding: 120px 24px; }
+.notLoggedIn h2 { font-size: 1.5rem; margin-bottom: 12px; }
+.notLoggedIn p { color: var(--txt-secondary); margin-bottom: 24px; }
+.btnPrimary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: var(--grad-accent); color: var(--clr-primary-1); font-weight: 700; font-size: 1rem; border-radius: var(--radius-btn); transition: var(--transition); border: none; cursor: pointer; font-family: inherit; box-shadow: 0 4px 20px rgba(0,201,255,.3); }
+.btnPrimary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,201,255,.45); }
+
+/* ─── PROFILE CARD ─── */
+.profileCard { background: #fff; border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow-card); position: sticky; top: 88px; }
+.profileBanner { height: 120px; background: var(--grad-primary); position: relative; }
+.profileBanner::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(0,201,255,.2) 0%, transparent 60%); }
+.avatarWrap { width: 96px; height: 96px; border-radius: 50%; background: #fff; margin: -48px auto 0; position: relative; z-index: 1; padding: 4px; }
+.avatarRing { width: 100%; height: 100%; border-radius: 50%; background: var(--grad-accent); padding: 3px; display: flex; align-items: center; justify-content: center; }
+.avatar { width: 100%; height: 100%; border-radius: 50%; background: var(--grad-primary); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #fff; font-family: var(--font-head); font-weight: 700; }
+.profileInfo { text-align: center; padding: 16px 24px 24px; }
+.profileInfo h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+.email { color: var(--txt-secondary); font-size: .85rem; margin-bottom: 16px; }
+.profileStats { display: flex; justify-content: center; gap: 12px; margin-bottom: 20px; }
+.statPill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; background: rgba(0,201,255,.06); border-radius: 999px; font-size: .8rem; font-weight: 600; color: var(--clr-primary-3); }
+.statPill svg { width: 14px; height: 14px; stroke: var(--accent-1); }
+
+/* ─── QUICK LINKS ─── */
+.quickLinks { display: flex; flex-direction: column; gap: 4px; padding: 0 16px 20px; }
+.quickLink { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: var(--radius-btn); transition: var(--transition); font-size: .9rem; font-weight: 500; color: var(--txt-primary); text-decoration: none; background: none; border: none; cursor: pointer; font-family: inherit; width: 100%; text-align: left; }
+.quickLink:hover { background: rgba(0,201,255,.06); color: var(--accent-1); }
+.quickLink svg { width: 18px; height: 18px; stroke: var(--txt-secondary); transition: var(--transition); }
+.quickLink:hover svg { stroke: var(--accent-1); }
+.logoutLink { color: #EF4444; }
+.logoutLink svg { stroke: #EF4444; }
+
+/* ─── CONTENT PANELS ─── */
+.contentPanels { display: flex; flex-direction: column; gap: 24px; }
+.panel { background: #fff; border-radius: var(--radius-card); padding: 32px; border: 1px solid rgba(0,0,0,.04); }
+.panelHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.panelHeader h3 { font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+.panelHeader h3 svg { width: 20px; height: 20px; stroke: var(--accent-1); }
+.editBtn { padding: 8px 16px; background: rgba(0,201,255,.08); border-radius: var(--radius-btn); font-size: .82rem; font-weight: 600; color: var(--accent-1); transition: var(--transition); border: none; cursor: pointer; font-family: inherit; }
+.editBtn:hover { background: rgba(0,201,255,.15); }
+
+.infoGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.infoItem label { display: block; font-size: .75rem; font-weight: 600; color: var(--txt-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+.value { font-size: .95rem; font-weight: 500; color: var(--txt-primary); }
+
+/* ─── SETTINGS ─── */
+.settingRow { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(0,0,0,.04); }
+.settingRow:last-child { border-bottom: none; }
+.settingInfo h4 { font-size: .95rem; font-weight: 600; margin-bottom: 2px; }
+.settingInfo p { font-size: .82rem; color: var(--txt-secondary); }
+.toggle { position: relative; width: 48px; height: 26px; flex-shrink: 0; display: inline-block; }
+.toggle input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; inset: 0; background: rgba(0,0,0,.12); border-radius: 999px; transition: var(--transition); cursor: pointer; }
+.slider::before { content: ''; position: absolute; width: 20px; height: 20px; border-radius: 50%; background: #fff; left: 3px; top: 3px; transition: var(--transition); box-shadow: 0 2px 4px rgba(0,0,0,.15); }
+.toggle input:checked + .slider { background: var(--grad-accent); }
+.toggle input:checked + .slider::before { transform: translateX(22px); }
+
+/* ─── DANGER ZONE ─── */
+.dangerZone { border: 1px solid rgba(239,68,68,.15); background: rgba(239,68,68,.02); }
+.dangerTitle { color: #EF4444 !important; }
+.dangerTitle svg { stroke: #EF4444 !important; }
+.dangerText { font-size: .9rem; color: var(--txt-secondary); margin-bottom: 20px; line-height: 1.7; }
+.deleteBtn { padding: 12px 24px; background: rgba(239,68,68,.08); border-radius: var(--radius-btn); color: #EF4444; font-weight: 600; font-size: .9rem; transition: var(--transition); border: none; cursor: pointer; font-family: inherit; }
+.deleteBtn:hover { background: #EF4444; color: #fff; box-shadow: 0 4px 20px rgba(239,68,68,.3); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) { .profileLayout { grid-template-columns: 1fr; } .profileCard { position: static; } }
+@media (max-width: 768px) { .infoGrid { grid-template-columns: 1fr; } }
